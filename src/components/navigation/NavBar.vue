@@ -23,8 +23,8 @@
         </div>
         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
           <div class="flex-shrink-0 flex items-center">
-            <img class="block lg:hidden h-8 w-auto" src="@/assets/logo.svg" alt="Cryptoapp" />
-            <img class="hidden lg:block h-8 w-auto" src="@/assets/logo.svg" alt="Cryptoapp" />
+            <img class="block lg:hidden h-6 w-auto" src="@/assets/logo.svg" alt="Cryptoapp" />
+            <img class="hidden lg:block h-6 w-auto" src="@/assets/logo.svg" alt="Cryptoapp" />
           </div>
           <div class="hidden sm:block sm:ml-6">
             <div class="flex space-x-4">
@@ -33,7 +33,7 @@
                 :key="item.name"
                 :class="[
                   item.selected ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                  'px-3 py-2 rounded-md text-sm font-medium cursor-pointer',
+                  'px-3 py-2 rounded-md text-sm font-medium cursor-pointer transition duration-500 ease-in-out',
                 ]"
                 :aria-current="item.selected ? 'page' : undefined"
                 @click="navigateTo(item.name)"
@@ -45,7 +45,6 @@
         </div>
       </div>
     </div>
-
     <DisclosurePanel class="sm:hidden">
       <div class="px-2 pt-2 pb-3 space-y-1">
         <button

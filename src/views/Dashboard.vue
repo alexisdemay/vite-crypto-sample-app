@@ -1,6 +1,12 @@
 <template>
   <section class="flex flex-row justify-center flex-wrap justify-around">
-    <CryptoCard v-for="currency in currencies" :key="currency.symbol" :ticker="tickers[currency.symbol] || {}" :currency="currency" />
+    <CryptoCard
+      v-for="(currency, index) in currencies"
+      :key="currency.symbol"
+      :ticker="tickers[currency.symbol] || {}"
+      :currency="currency"
+      :tabIndex="index + 1"
+    />
   </section>
 </template>
 <script lang="ts">
