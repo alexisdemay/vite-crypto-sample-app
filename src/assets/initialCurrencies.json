@@ -1,0 +1,58 @@
+[
+  {
+    "symbol": "BTCEUR",
+    "name": "Bitcoin",
+    "imgId": 1,
+    "from": "BTC",
+    "to": "EUR"
+  },
+  {
+    "symbol": "ETHEUR",
+    "name": "Ethereum",
+    "imgId": 1027,
+    "from": "ETH",
+    "to": "EUR"
+  },
+  {
+    "symbol": "DOGEEUR",
+    "name": "Dogecoin",
+    "imgId": 74,
+    "from": "DOGE",
+    "to": "EUR"
+  },
+  {
+    "symbol": "SHIBEUR",
+    "name": "SHIBA INU",
+    "imgId": 5994,
+    "from": "SHIB",
+    "to": "EUR"
+  },
+  {
+    "symbol": "XRPEUR",
+    "name": "XRP",
+    "imgId": 52,
+    "from": "XRP",
+    "to": "EUR"
+  },
+  {
+    "symbol": "DOTEUR",
+    "name": "Polkadot",
+    "imgId": 6636,
+    "from": "DOT",
+    "to": "EUR"
+  },
+  {
+    "symbol": "UNIEUR",
+    "name": "Uniswap",
+    "imgId": 7083,
+    "from": "UNI",
+    "to": "EUR"
+  },
+  {
+    "symbol": "MATICEUR",
+    "name": "Polygon",
+    "imgId": 3890,
+    "from": "MATIC",
+    "to": "EUR"
+  }
+]
