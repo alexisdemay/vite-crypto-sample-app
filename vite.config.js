@@ -15,6 +15,6 @@ export default defineConfig({
     _APP_VERSION: JSON.stringify(pkg.version),
   },
   build: {
-    sourcemap: true
-  }
+    sourcemap: process.env.NODE_ENV !== 'production',
+  },
 });
