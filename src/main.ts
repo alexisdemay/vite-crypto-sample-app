@@ -16,18 +16,15 @@ app.use(store);
 
 routerPush(RouteNames.DASHBOARD);
 
-Analytics({
+const analytics = Analytics({
   app: 'vite-crypto-sample-app',
   plugins: [
     googleAnalytics({
-      trackingId: 'G-81T93WQT48'
+      trackingId: 'G-MVY0HQDEML',
     }),
     perfumePlugin({
+      category: 'performance',
       perfume: Perfume,
-      destinations: {
-        all: false,
-        'google-analytics': true,
-      },
     }),
   ],
 });
@@ -42,18 +39,18 @@ function main() {
 
 main();
 
-const sleep = () => new Promise<void>((resolve) => setTimeout(() => resolve(), 100));
+const sleep = () => new Promise<void>(resolve => setTimeout(() => resolve(), 100));
 const init = async () => {
-  performance.mark("One");
+  performance.mark('One');
   await sleep();
-  performance.mark("Two");
+  performance.mark('Two');
   await sleep();
-  performance.mark("Three");
+  performance.mark('Three');
   await sleep();
-  performance.mark("Four");
+  performance.mark('Four');
 };
 
 init().then(() => {
-  performance.measure("🐪 Outer 🐪", "One", "Four");
-  performance.measure("🐪 Inner 🐪", "Two", "Three");
+  performance.measure('🐪 Outer 🐪', 'One', 'Four');
+  performance.measure('🐪 Inner 🐪', 'Two', 'Three');
 });
