@@ -35,7 +35,9 @@ export default defineComponent({
   },
   created() {
     this.currencies.forEach(currency => {
-      this.binanceService.subscribeSymbol(currency.symbol, ticker => this.store.commit(ApplicationMutation.UPDATE_TICKER, ticker));
+      this.binanceService.subscribeSymbol(currency.symbol, ticker => {
+        this.store.commit(ApplicationMutation.UPDATE_TICKER, ticker);
+      });
     });
   },
   unmounted() {
