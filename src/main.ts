@@ -49,19 +49,3 @@ function main() {
 }
 
 main();
-
-const sleep = () => new Promise<void>(resolve => setTimeout(() => resolve(), 100));
-const init = async () => {
-  performance.mark('One');
-  await sleep();
-  performance.mark('Two');
-  await sleep();
-  performance.mark('Three');
-  await sleep();
-  performance.mark('Four');
-};
-
-init().then(() => {
-  performance.measure('🐪 Outer 🐪', 'One', 'Four');
-  performance.measure('🐪 Inner 🐪', 'Two', 'Three');
-});
